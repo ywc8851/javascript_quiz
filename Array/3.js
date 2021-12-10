@@ -5,9 +5,7 @@ let todos = [
 ];
 
 const sortBy = (todos, key) =>
-  todos.sort((todo1, todo2) =>
-    todo1[key] > todo2[key] ? 1 : todo1[key] < todo2[key] ? -1 : 0
-  );
+  todos.sort((todo1, todo2) => (todo1[key] - todo2[key] ? 1 : -1));
 
 todos = sortBy(todos, "id");
 console.log(todos);
